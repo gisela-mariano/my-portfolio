@@ -213,46 +213,64 @@ const DivStyleProjetos = styled.div`
           }
         }
   
-        :hover{
+        @media screen and (min-width: 935px){
+
+          :hover{
   
-          animation: ${animCard} 3s forwards;
-  
-          .infos-card{
-            animation: ${animInfosCard} 2s forwards;
-            animation-delay: 1s;
+            animation: ${animCard} 3s forwards;
+
+            .infos-card{
+              animation: ${animInfosCard} 2s forwards;
+              animation-delay: 1s;
+            }
+
+            .sombra-topo{
+              animation: ${animCardBordaTopo} 1s;
+              animation-delay: 1s;
+            }
+
+            .sombra-esquerda{
+              animation: ${animCardBordaEsq} 1s;
+              animation-delay: 1.7s;
+            }
+
+            .sombra-base{
+              animation: ${animBarra} 1s;
+              animation-delay: 3s;
+            }
+
+            .sombra-direita{
+              animation: ${animCardBordaDir} 1s;
+              animation-delay: 3.7s;
+            }
           }
-  
-          .sombra-topo{
-            animation: ${animCardBordaTopo} 1s;
-            animation-delay: 1s;
-          }
-  
-          .sombra-esquerda{
-            animation: ${animCardBordaEsq} 1s;
-            animation-delay: 1.7s;
-          }
-  
-          .sombra-base{
-            animation: ${animBarra} 1s;
-            animation-delay: 3s;
-          }
-  
-          .sombra-direita{
-            animation: ${animCardBordaDir} 1s;
-            animation-delay: 3.7s;
-          }
+
         }
       }
 
 
       @media screen and (max-width: 935px){
-        height: 500px;
+        height: 450px;
 
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
 
         overflow-y: auto;
+
+        ::-webkit-scrollbar {
+          width: 5px;
+          height: 5px;
+        }
+
+        ::-webkit-scrollbar-track, ::-webkit-scrollbar-corner {
+          background: var(--azul-escuro);
+        }
+
+        ::-webkit-scrollbar-thumb {
+          background: var(--pink);
+          border-radius: 3px;
+        }
 
         .card{
           height: 420px;

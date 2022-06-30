@@ -6,6 +6,7 @@ import { animTag } from "../../styles/animacoes";
 const DivStyleContato = styled.div`
 
   height: 350px;
+  padding-top: 20px;
 
   background: linear-gradient(180deg, #341c69 16.31%, #06083D 139.24%);
 
