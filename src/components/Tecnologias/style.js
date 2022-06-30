@@ -191,6 +191,20 @@ const DivStyleTecnologias = styled.div`
         flex-wrap: wrap;
 
         overflow-y: auto;
+
+        ::-webkit-scrollbar {
+          width: 5px;
+          height: 5px;
+        }
+
+        ::-webkit-scrollbar-track, ::-webkit-scrollbar-corner {
+          background: var(--azul-escuro);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+          background: var(--pink);
+          border-radius: 3px;
+        }
       }
     }
 
